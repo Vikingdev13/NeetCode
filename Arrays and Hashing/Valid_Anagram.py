@@ -6,4 +6,3 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 """
 def validAnagram(str):
     pass
-
