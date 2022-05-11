@@ -5,13 +5,14 @@ Given an integer array nums, return true if any value appears at least twice in 
 
 
 """
+*** Brute Force approach ***
 Timsort = O(nlog(n))
 nested for loops = O(n^2)
 Time: O(n^2)
 Space: O(n)
 """
 def containsDuplicates1(nums):
-    nums.sort()
+    nums.sort() # Timsort
 
     for i in range(len(nums)):
         for j in range(i+1, len(nums)):
@@ -24,6 +25,7 @@ nums = [1,2,3,1]
 print(containsDuplicates1(nums))
 
 """
+*** Optimized approach ***
 set = O(n)
 Time: O(n)
 Space: O(n)
