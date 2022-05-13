@@ -51,7 +51,7 @@ def validPalindrome2(s):
         right -= 1
     return True
     
-s = "A man, a plan, a canal: Panama"
+
 print(validPalindrome2(s))
 
 """
