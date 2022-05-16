@@ -22,7 +22,7 @@ def validParentheses(s):
     for ch in s:
         # check if character(key) not in our hashMap
         if ch not in brackets:
-            # if it isn't, push that character to the stack and continue on
+            # if it is, push that character to the stack and continue on
             stack.append(ch)
             continue
         # if the stack is empty or the last character on the stack does not equal 
