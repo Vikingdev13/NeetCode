@@ -29,7 +29,7 @@ def validParentheses(s):
         # the current character of brackets, return False
         if not stack or stack[-1] != brackets[ch]:
             return False
-        # else it does equal the the current character of brackets and the stack 
+        # else it does equal the current character of brackets and the stack 
         # is not empty, we pop it from the stack bc we have a match
         stack.pop()
     # return TRUE or FALSE that the stakc is empty
