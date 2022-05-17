@@ -1,6 +1,11 @@
 """
 Given the root of a binary tree, invert the tree, and return its root
 """
+
+"""
+Time: O(n)
+Space: O(n)
+"""
 class TreeNode:
     def __init__(self, val, left, right):
         self.val = val
