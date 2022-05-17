@@ -10,8 +10,8 @@ sr = source row
 sc = source column
 """
 """
-Time: 
-Space: 
+Time: O(n)
+Space: O(n)
 """
 def floodFill(image, sr, sc, newColor):
     # is the image is none or the image is already the new color, we dont need to do anything
