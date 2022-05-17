@@ -9,7 +9,7 @@ or there is no cycle and we had to traverse the entire list to determine this
 Space: O(1)
 """
 class Node:
-    def __init__(self, val, next):
+    def __init__(self, val):
         self.val = val
         self.next = None
 
