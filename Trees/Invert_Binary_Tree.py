@@ -18,7 +18,7 @@ def invertTree(root):
         return None
     # here we will swap the children/subtrees
     # assign the left child to a temp variable
-    # set the left child to equla the right child
+    # set the left child to equal the right child
     # then set the right child to the temp variable
     tmp = root.left
     root.left = root.right
