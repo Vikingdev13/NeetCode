@@ -34,6 +34,13 @@ def twoSumOptimized(nums, target):
     for indx, val in enumerate(nums):
         difference = target - val
         if difference in hashMap:
+            # return the [index of value where the key=diff, and the current indx]
+            # EX: for the array nums above, hashMap contains for following key/val pairs at the 4th iteration of loop
+            # 2 : 0
+            # 7 : 1
+            # 4 : 2
+            # diff will equate to 4 bc 14 - 10 = 4, and 4 IS in the hashMap, so return the val of that key/val pair and the current index we're at
+            # returns [2,3]
             return [hashMap[difference], indx]
         hashMap[val] = indx
 
