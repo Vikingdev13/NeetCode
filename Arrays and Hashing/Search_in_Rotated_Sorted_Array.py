@@ -18,6 +18,7 @@ def search(nums, target):
         mid = (left + right) // 2
         if nums[mid] == target:
             return mid
+            
         # left sorted portion
         if nums[left] <= nums[mid]:
             if target > nums[mid] or target < nums[left]:
