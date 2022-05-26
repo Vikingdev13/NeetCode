@@ -10,7 +10,7 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 from numpy import product
 
 """
-*** Naive Approach ***
+*** Naive Approach 1 ***
 Time: O(n)
 Space: O(1) - problem states that output array does not count in memory calculation, otherwise it would be O(n)
 But problem statement does not want us to use division operation so we must find another way.
@@ -28,6 +28,26 @@ def productExceptSelf(nums):
 
 nums = [1,2,3,4]
 print(productExceptSelf(nums))
+
+"""
+*** Naive Approach 2 w/o using any library ***
+Time: O(n)
+Space: O(1) - problem states that output array does not count in memory calculation, otherwise it would be O(n)
+But problem statement does not want us to use division operation so we must find another way.
+"""
+def prodArrayExceptSelf(nums):
+    result = []
+    prod = 1
+
+    for num in nums:
+        prod *= num
+    
+    for num in nums:
+        if num == 0:
+            raise ZeroDivisionError("Cannot divide by 0")
+        else:
+            result.append(prod//num)
+    return result
 
 """
 Optimal Approach
