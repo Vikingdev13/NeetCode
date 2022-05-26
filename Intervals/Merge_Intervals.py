@@ -6,7 +6,7 @@ Time: O(nlog(n))
 Space: O(n)
 """
 def mergeIntervals(intervals):
-    # sort the intervals, and use a lambda func to accept and argument pair, 
+    # sort the intervals, and use a lambda func to accept an argument pair, 
     # and return the value of pair[0], in other words, pair is a list and the 
     # lambda function will return the first element of the list. This allows 
     # us to sort the intervals based on the first element in each list
