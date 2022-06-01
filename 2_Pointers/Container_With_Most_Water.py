@@ -14,8 +14,8 @@ def containerWithMostWater(height):
     # while the left and right pointers haven't touched, compute the maxArea between those two pointers and store the greater value
     # between what is stored in result and maxArea in result
     while left < right:
-        # to compute the maxArea, take the difference in the right pointer and left pointer and multiply it by the minimum value between
-        # where the left and right pointers sit
+        # to compute the maxArea, take the difference of the right pointer index and left pointer index and multiply it by the 
+        # minimum value between where the left and right pointers sit
         # EX: On the first iteration it would look like this:
         # maxArea = (8-0) * min(1,7) = 8 * 1 = 8
         # result = max(0,8) which result will equal 8 now
