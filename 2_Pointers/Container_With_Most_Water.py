@@ -16,7 +16,7 @@ def containerWithMostWater(height):
     while left < right:
         # to compute the maxArea, take the difference of the right pointer index and left pointer index and multiply it by the 
         # minimum value between where the left and right pointers sit
-        # EX: On the first iteration it would look like this:
+        # EX: On the first iteration of the given array height, it would look like this:
         # maxArea = (8-0) * min(1,7) = 8 * 1 = 8
         # result = max(0,8) which result will equal 8 now
         maxArea = (right - left) * min(height[left], height[right])
