@@ -9,7 +9,7 @@ Given the sorted rotated array nums of unique elements, return the minimum eleme
 
 You must write an algorithm that runs in O(log n) time
 """
-# We have some clues on how to go about solving this. We're given a sorted array already, 
+# We have some clues on how to go about solving this. We're given a SORTED array already, 
 # and we need to write an algorithm in O(log(n)) time. To me, this tells me Binary Search.
 
 def minInRotatedSortedArray(nums):
