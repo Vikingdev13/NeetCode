@@ -14,19 +14,19 @@ You must write an algorithm that runs in O(log n) time
 
 def minInRotatedSortedArray(nums):
     left, right = 0, len(nums) - 1
-    currMin = -1
+    index = -1
 
     while left <= right:
         mid = (left + right) // 2
         # if the val at nums[mid] is less than or equal to the last number in the array,
-        # then update the currMin to equal nums[mid] and move the right ptr to the left
+        # then update the index to equal nums[mid] and move the right ptr to the left
         # because that means the values to the right of mid are all too high
         if nums[mid] <= nums[-1]:
-            currMin = nums[mid]
+            index = nums[mid]
             right = mid - 1
         else:
             left = mid + 1
-    return currMin
+    return index
 
 
 nums = [3,4,5,1,2]
