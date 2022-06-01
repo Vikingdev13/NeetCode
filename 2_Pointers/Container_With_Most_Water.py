@@ -7,6 +7,10 @@ Return the maximum amount of water a container can store.
 
 Notice that you may not slant the container.
 """
+"""
+Time: O(n)
+Space: O(1)
+"""
 def containerWithMostWater(height):
     # Initialize a result variable and 2 pointers, left and right, where left is at the beginning or array and right is at the end
     result = 0
