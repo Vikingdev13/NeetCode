@@ -9,19 +9,19 @@ A substring is a contiguous sequence of characters within the string.
 Time: O(n^2)
 Space: O(1)
 """
-def countEvenPalindromes(input, left, right):
+def countEvenPalindromes(s, left, right):
         result = 0
-        while left >= 0 and right < len(input) and input[left] == input[right]:
+        while left >= 0 and right < len(s) and s[left] == s[right]:
             result += 1
             left -= 1
             right += 1
         return result
         
-def countPalindromes(input):
+def countPalindromes(s):
     result = 0
-    for i in range(len(input)):
-        result += countEvenPalindromes(input, i, i)
-        result += countEvenPalindromes(input, i, i+1)
+    for i in range(len(s)):
+        result += countEvenPalindromes(s, i, i)
+        result += countEvenPalindromes(s, i, i+1)
     return result
 
 s = 'abcbda'
