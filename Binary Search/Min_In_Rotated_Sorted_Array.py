@@ -11,6 +11,10 @@ You must write an algorithm that runs in O(log n) time
 """
 # We have some clues on how to go about solving this. We're given a SORTED array already, 
 # and we need to write an algorithm in O(log(n)) time. To me, this tells me Binary Search.
+"""
+Time: O(log(n))
+Space: O(1)
+"""
 
 def minInRotatedSortedArray(nums):
     left, right = 0, len(nums) - 1
