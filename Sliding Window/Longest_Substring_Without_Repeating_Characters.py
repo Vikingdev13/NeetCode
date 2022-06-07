@@ -23,7 +23,7 @@ def lengthOfLongestSubstring(s):
     # We'll move the right pointer through the string first
     for right in range(len(s)):
         # check to see if a character is in the set, if so, we'll remove it and move the left pointer to the right
-        # the right pointer has already p;laced the character into the set, so if the left pointer happens upon a duplicate
+        # the right pointer has already placed the character into the set, so if the left pointer happens upon a duplicate
         # character that is already in the set, we will remove it and increment the left pointer
         while s[right] in hashSet:
             hashSet.remove(s[left])
