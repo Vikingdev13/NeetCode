@@ -10,32 +10,42 @@ Space: O(m*n)
 
 def isValidCell(grid, row, col):
     try:
+        # make sure we're not out of bounds and look for cells marked with a 1, which is an island
         return row >= 0 and col >= 0 and grid[row][col] == "1"
     except IndexError:
         return False
 
 def dfs(grid, row, col):
+    # if not a validCell, meaning a cell marked a 1, move to another cell
     if not isValidCell(grid, row, col):
         return
+    # else mark the valid cell with a 0 so we know we've visited it already
     grid[row][col] = 0
+    # store a list of pairs that represent the directions from a cell
     directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+    # iterate over the directions to move to nearby cells
     for i, j in directions:
         dfs(grid, row + i, col + j)
 
 def numIslands(grid):
     result = 0
+    # iterate over every row
     for i in range(len(grid)):
+        # iterate over every column
         for j in range(len(grid[0])):
+            # if the cell is a land cell, update result counter
             if grid[i][j] == "1":
                 result += 1
+                # call the dfs function to visit and mark the neighboring cells 
+                # of the cell we just found that is an island cell
                 dfs(grid, i, j)
     return result
 
 grid = [
-  ["1","1","0","0","0"],
+  ["1","1","0","0","1"],
   ["1","1","0","0","0"],
   ["0","0","1","0","0"],
   ["0","0","0","1","1"]
 ]
 
-print(numIslands(grid))
+print(numIslands(grid)) # should print 4
