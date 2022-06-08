@@ -24,7 +24,7 @@ def dfs(grid, row, col):
     # else mark the valid cell with a 0 so we know we've visited it already
     grid[row][col] = 0
     # store a list of pairs that represent the directions from a cell
-    # directions = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1,-1], [-1,1], [1,1], [1,-1]] # use this is diagonally cells can count
+    # directions = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1,-1], [-1,1], [1,1], [1,-1]] # use this if diagonally cells can count
     directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
     # iterate over the directions to move to nearby cells
     for i, j in directions:
