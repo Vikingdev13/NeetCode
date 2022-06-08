@@ -28,6 +28,7 @@ def dfs(grid, row, col):
         dfs(grid, row + i, col + j)
 
 def numIslands(grid):
+    # initialize a counter variable to store how many islands we find
     result = 0
     # iterate over every row
     for i in range(len(grid)):
