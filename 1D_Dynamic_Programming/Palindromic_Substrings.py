@@ -29,5 +29,5 @@ def countPalindromes(s):
         result += countPalindromesWithCenter(s, i, i+1)
     return result
 
-s = 'abcbda'
+s = 'google'
 print(countPalindromes(s))
