@@ -2,6 +2,8 @@
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
 
 An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+**** Will need to clarify the above if not initially told so. Ask if only horizontally or vertically count or if diagonally too. The difference really only comes to the directions you specify the algo to move
 """
 """
 Time: O(m*n)
@@ -11,7 +13,7 @@ Space: O(m*n)
 def isValidCell(grid, row, col):
     try:
         # make sure we're not out of bounds and look for cells marked with a 1, which is an island
-        return row >= 0 and col >= 0 and grid[row][col] == "1"
+        return row >= 0 and col >= 0 and grid[row][col] == 1
     except IndexError:
         return False
 
@@ -22,6 +24,7 @@ def dfs(grid, row, col):
     # else mark the valid cell with a 0 so we know we've visited it already
     grid[row][col] = 0
     # store a list of pairs that represent the directions from a cell
+    # directions = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1,-1], [-1,1], [1,1], [1,-1]] # use this is diagonally cells can count
     directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
     # iterate over the directions to move to nearby cells
     for i, j in directions:
@@ -35,12 +38,14 @@ def numIslands(grid):
         # iterate over every column
         for j in range(len(grid[0])):
             # if the cell is a land cell, update result counter
-            if grid[i][j] == "1":
+            if grid[i][j] == 1:
                 result += 1
                 # call the dfs function to visit and mark the neighboring cells 
                 # of the cell we just found that is an island cell
                 dfs(grid, i, j)
     return result
+
+
 
 grid = [
   ["1","1","0","0","1"],
@@ -49,4 +54,16 @@ grid = [
   ["0","0","0","1","1"]
 ]
 
-print(numIslands(grid)) # should print 4
+# grid = [[1, 0, 1, 0, 0, 0, 1, 1, 1, 1],
+# 	    [0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
+# 	    [1, 1, 1, 1, 0, 0, 1, 0, 0, 0],
+# 	    [1, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+# 	    [1, 1, 1, 1, 0, 0, 0, 1, 1, 1],
+# 	    [0, 1, 0, 1, 0, 0, 1, 1, 1, 1],
+# 	    [0, 0, 0, 0, 0, 1, 1, 1, 0, 0],
+# 	    [0, 0, 0, 1, 0, 0, 1, 1, 1, 0],
+# 	    [1, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+# 	    [1, 1, 1, 1, 0, 0, 0, 1, 1, 1]
+#        ]
+
+print(numIslands(grid))
