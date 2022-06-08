@@ -12,7 +12,7 @@ Space: O(m*n)
 
 def isValidCell(grid, row, col):
     try:
-        # make sure we're not out of bounds and look for cells marked with a 1, which is an island
+        # make sure we're not out of bounds and look for cells marked with a 1, which is a land cell
         return row >= 0 and col >= 0 and grid[row][col] == "1"
     except IndexError:
         return False
