@@ -5,7 +5,7 @@ Return the length of the longest substring containing the same letter you can ge
 """
 """
 Time: O(n)
-Space: O(n)
+Space: O(1)
 """
 def characterReplacement(s, k):
     count = {}
@@ -28,6 +28,6 @@ def characterReplacement(s, k):
         result = max(result, (right - left + 1))
     return result
 
-s = 'AABABBA'
-k = 1
+s = 'aabccbb'
+k = 2
 print(characterReplacement(s, k))
