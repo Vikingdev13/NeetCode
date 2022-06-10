@@ -14,6 +14,7 @@ def max_sub_array_of_size_k(arr, k):
         if (right-left+1) >= k:
             # update the maxSum
             maxSum = max(maxSum, windowSum)
+            # shrink the window size
             # subtract the val of the left ptr and increment the left ptr
             windowSum -= arr[left]
             left += 1
