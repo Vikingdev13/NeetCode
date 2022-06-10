@@ -6,7 +6,7 @@ The testcases will be generated such that the answer is unique.
 A substring is a contiguous sequence of characters within the string
 """
 """
-Time: O(n)
+Time: O(n+m)
 Space: O(n)
 """
 from collections import Counter
