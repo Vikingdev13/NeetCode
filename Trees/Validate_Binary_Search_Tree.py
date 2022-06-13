@@ -8,8 +8,8 @@ A valid BST is defined as follows:
 - Both the left and right subtrees must also be binary search trees.
 """
 """
-Time:
-Space:
+Time: O(n)
+Space: O(n)
 """
 class TreeNode:
     def __init__(self, val, left, right):
@@ -30,5 +30,5 @@ def isValidBST(root):
             return False
         # check the boundaries of left and right subtrees
         return (valid(node.left, left, node.val) and valid(node.right, node.val, right))
-        
+
     return valid(root, float('-inf'), float('inf'))
