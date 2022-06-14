@@ -6,8 +6,8 @@ Return a deep copy (clone) of the graph.
 Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
 """
 """
-Time: 
-Space: 
+Time: O(n)
+Space: O(n)
 """
 # class Node:
 #     def __init__(self, val = 0, neighbors = None):
