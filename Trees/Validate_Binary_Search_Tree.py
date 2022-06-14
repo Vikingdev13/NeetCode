@@ -11,11 +11,11 @@ A valid BST is defined as follows:
 Time: O(n)
 Space: O(n)
 """
-class TreeNode:
-    def __init__(self, val, left, right):
-        self.val = val
-        self.left = None
-        self.right = None
+# class TreeNode:
+#     def __init__(self, val, left, right):
+#         self.val = val
+#         self.left = None
+#         self.right = None
 
 def isValidBST(root):
 
@@ -26,6 +26,7 @@ def isValidBST(root):
             return True
         # boundary checks
         # -inf < node.val < inf
+        # if not false
         if not(node.val < right and node.val > left):
             return False
         # check the boundaries of left and right subtrees
