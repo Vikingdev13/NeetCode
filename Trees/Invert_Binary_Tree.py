@@ -4,13 +4,13 @@ Given the root of a binary tree, invert the tree, and return its root
 
 """
 Time: O(n)
-Space: O(n)
+Space: O(h) - h = height of tree
 """
-class TreeNode:
-    def __init__(self, val, left, right):
-        self.val = val
-        self.left = None
-        self.right = None
+# class TreeNode:
+#     def __init__(self, val, left, right):
+#         self.val = val
+#         self.left = None
+#         self.right = None
 
 def invertTree(root):
     # if the tree is empty return none
