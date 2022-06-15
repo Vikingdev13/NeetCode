@@ -28,5 +28,9 @@ def isValidBST(root):
         if node.val <= low and node.val >= high:
             return False
         # the left and right subtree must also be valid
+        # we will compare the node vals of the left subtree to ensure that the curr node val is greater than the low or -inf and 
+        # less than the curr node's parent val.
+        # Likewise, the right subtree will be tested in the same manner, except we check that the curr node's val is less than 
+        # high or inf and greater than the parent of curr node
         return (validate(node.right, node.val, high) and validate(node.left, low, node.val))
     return validate(root)
