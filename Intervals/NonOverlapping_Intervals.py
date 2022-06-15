@@ -19,7 +19,7 @@ def eraseOverlapIntervals(intervals):
     for interval in intervals[1:]:
         # if interval[0] which is [1,3] 0 = 1 is less than current[1] which is [1,2] 1 = 2 which is TRUE
         if interval[0] < current[1]:
-            # if interval[0] 0 = 1 > current[1] 1 = 2, which is FALSE, move to the next interval
+            # if interval[1] 1 = 3 > current[1] 1 = 2, which is TRUE, update count, move to next interval
             if interval[1] > current[1]:
                 count += 1
             # else if interval[1] is less than or equal to current[1], 
