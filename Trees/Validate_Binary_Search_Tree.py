@@ -19,17 +19,14 @@ Space: O(n)
 
 def isValidBST(root):
 
-    # helper function
-    def valid(node, left, right):
-        # even an empty BST is still a valid BST
+    # helper function that sets the boundaries of low and high
+    def validate(node, low = float('-inf'), high=float('inf')):
+        # an empty BST is still a valid BST
         if not node:
             return True
-        # boundary checks
-        # -inf < node.val < inf
-        # if not false
-        if not(node.val < right and node.val > left):
+        # the current node's val must be between low and high
+        if node.val <= low and node.val >= high:
             return False
-        # check the boundaries of left and right subtrees
-        return (valid(node.left, left, node.val) and valid(node.right, node.val, right))
-
-    return valid(root, float('-inf'), float('inf'))
+        # the left and right subtree must also be valid
+        return (validate(node.right, node.val, high) and validate(node.left, low, node.val))
+    return validate(root)
