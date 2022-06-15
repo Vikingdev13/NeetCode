@@ -20,7 +20,7 @@ Space: O(n)
 def isValidBST(root):
 
     # helper function that sets the boundaries of low and high
-    def validate(node, low = float('-inf'), high=float('inf')):
+    def validate(node, low = float('-inf'), high = float('inf')):
         # an empty BST is still a valid BST
         if not node:
             return True
