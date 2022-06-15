@@ -7,18 +7,22 @@ Space: O(1)
 """
 def eraseOverlapIntervals(intervals):
     # sorting is O(nlog(n))
+    # using [[1,2],[2,3],[3,4],[1,3]] as a test
+    # the intervals look like this now [[1,2], [1,3], [2,3], [3,4]]
     intervals.sort()
     # store the first interval in a variable
+    # current = [1,2]
     current = intervals[0]
     count = 0
     # iterate through the intervals beginning AFTER the first pair
+    # starting at [1,3], [2,3], [3,4]
     for interval in intervals[1:]:
+        # if interval[0] which is [1,3] 0 = 1 is less than current[1] which is [1,2] 1 = 2 which is TRUE
         if interval[0] < current[1]:
-            # if the current pair(0,1)'s 1 val is less than the 1 val of the interval, update the counter. 
-            # This means that there is an overlap
+            # if interval[0] 0 = 1 > current[1] 1 = 2, which is FALSE, move to the next interval
             if interval[1] > current[1]:
                 count += 1
-            # else if the current pair(0,1)'s 1 val is greater than or equal to the intervals 1 val, 
+            # else if interval[1] is less than or equal to current[1], 
             # set the current pair's 0 val to the intervals 1 val and update the counter since there was an overlap
             elif interval[1] <= current[1]:
                 current = interval
