@@ -6,8 +6,8 @@ The path sum of a path is the sum of the node's values in the path.
 Given the root of a binary tree, return the maximum path sum of any non-empty path.
 """
 """
-Time: 
-Space: 
+Time: O(n)
+Space: O(h) : where h is the tree height, to keep the recurion call stack
 """
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
