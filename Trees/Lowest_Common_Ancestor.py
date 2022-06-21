@@ -7,11 +7,11 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 Time: O(log(n)) - I believe this is log(n) since it checks the val of the nodes p & q, and cuts the tree in half based on that, which is a binary search
 Space: O(1)
 """
-class Node:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+# class Node:
+#     def __init__(self, val):
+#         self.val = val
+#         self.left = None
+#         self.right = None
 
 def lowestCommonAncestor(root, p, q):
     curr = root
