@@ -14,16 +14,15 @@ Space: O(1)
 #         self.right = None
 
 def lowestCommonAncestor(root, p, q):
-    curr = root
-    # while curr is not null
-    while curr:
-        # check the values of p and q, if they're both greater than the current node val, 
+    # while root is not null
+    while root:
+        # check the values of p and q, if they're both greater than the root node val, 
         # traverse down the right subtree
-        if p.val > curr.val and q.val > curr.val:
-            curr = curr.right
-        # check the values of p and q, if they're both less than the current node val, 
+        if p.val > root.val and q.val > root.val:
+            root = root.right
+        # check the values of p and q, if they're both less than the root node val, 
         # traverse down the left subtree
-        elif p.val < curr.val and q.val < curr.val:
-            curr = curr.left
+        elif p.val < root.val and q.val < root.val:
+            root = root.left
         else:
-            return curr
+            return root
