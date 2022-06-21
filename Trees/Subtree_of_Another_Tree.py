@@ -4,8 +4,8 @@ Given the roots of two binary trees root and subRoot, return true if there is a 
 A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node's descendants. The tree tree could also be considered as a subtree of itself.
 """
 """
-Time:
-Space:
+Time: O(s*t)
+Space: O(s*t)
 """
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
