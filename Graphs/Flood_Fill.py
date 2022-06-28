@@ -14,7 +14,7 @@ Time: O(n)
 Space: O(n)
 """
 def floodFill(image, sr, sc, newColor):
-    # is the image is none or the image is already the new color, we dont need to do anything
+    # if the image is none or the image is already the new color, we dont need to do anything
     if image == None or image[sr][sc] == newColor:
         return image
     # else call the function fill recursively
