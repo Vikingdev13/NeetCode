@@ -19,8 +19,8 @@ def canConstruct(note, magazine):
         # if the current char in note doesn't exist in the magazine, the note can't be constructed
         if letters[ch] <= 0:
             return False
-        # decrement the char count from the magazine since we cant use it twice
-        # EX: if we only have 2 'e' in the magazine, the note can only have 2 'e as well
+        # else decrement the char count from the magazine since we cant use it twice
+        # EX: if we only have 2 'e' in the magazine, the note can only have 2 'e' as well
         letters[ch] -= 1
     return True
 
