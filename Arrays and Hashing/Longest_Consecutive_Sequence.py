@@ -6,6 +6,10 @@ You must write an algorithm that runs in O(n) time.
 """
 Time: O(n)
 Space: O(n)
+
+My initial thought was to sort the input, but since we have to write an algorithm that runs in O(n) time, 
+that's not a good idea since sorting the input would give me a O(nlog(n))) time complexity. It's not a 
+bad place to start, but will definitely need to be optimized.
 """
 def longestConsecutive(nums):
     numSet = set(nums)
