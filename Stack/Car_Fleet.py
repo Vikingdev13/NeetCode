@@ -12,7 +12,7 @@ If a car catches up to a car fleet right at the destination point, it will still
 Return the number of car fleets that will arrive at the destination.
 """
 """
-Time: O(n)
+Time: O(nlog(n))
 Space: O(n)
 """
 def carFleet(target, position, speed):
