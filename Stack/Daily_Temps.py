@@ -15,7 +15,7 @@ def dailyTemps(temps):
         # while the stack is empty and the curr temp(val) is greater than the top [indx, val] of the stack
         while stack and val > stack[-1][0]:
             # We need to pop those pairs off the stack
-            stackTemp, stackIndx = stack.pop()
+            stackVal, stackIndx = stack.pop()
             # Then we check how many indices we are from the last temp less than our current temp 
             answer[stackIndx] = (indx - stackIndx)
         # append the pair that is greater than the current val
