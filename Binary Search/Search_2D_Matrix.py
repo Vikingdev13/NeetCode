@@ -5,8 +5,8 @@ Write an efficient algorithm that searches for a value target in an m x n intege
 - The first integer of each row is greater than the last integer of the previous row.
 """
 """
-Time:
-Space:
+Time: O(logm + logn) m being the number or rows and n being the number of values searched in a row
+Space: O(1)
 """
 def searchMatrix(matrix, target):
     ROWS, COLS = len(matrix), len(matrix[0])
