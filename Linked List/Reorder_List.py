@@ -8,8 +8,14 @@ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 You may not modify the values in the list's nodes. Only nodes themselves may be changed.
 """
 """
-Time:
-Space:
+This problem can be solved easily if you can:
+- find the middle of a LL
+- Reverse a LL
+- Merge 2 sorted lists
+"""
+"""
+Time: O(n)
+Space: O(1)
 """
 # Definition for singly-linked list.
 # class ListNode:
