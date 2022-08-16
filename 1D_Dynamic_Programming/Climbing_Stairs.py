@@ -8,16 +8,20 @@ Time: O(n)
 Space: O(1)
 """
 def climbStairs(n):
-    one, two = 1, 1
+    if n < 2:
+        return n
+    one, two = 1, 2
 
-    for _ in range(n - 1):
-        tmp = one
-        one = one + two
-        two = tmp
-    return one
+    for _ in range(3, n + 1):
+        third = one + two
+        one = two
+        two = third
+    return two
 
 
 if __name__ == "__main__":
+    n = 1
+    print(climbStairs(n)) # 1 way to climb
     n = 3
     print(climbStairs(n)) # 3 ways to climb
     n = 2
