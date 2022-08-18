@@ -29,6 +29,24 @@ def removeNthFromEnd(head, n):
     slow.next = slow.next.next
     # return the new list
     return dummy.next
+"""
+Time: O(n)
+Space: O(1)
+"""
+def removeNthFromEnd2(head, n):
+    fast, slow = head, head
+
+    for _ in range(n):
+        fast = fast.next
+
+    if not fast: 
+        return head.next
+
+    while fast.next:
+        slow = slow.next
+        fast = fast.next
+    slow.next = slow.next.next
+    return head
 
 head = [1,2,3,4,5]
 n = 2
