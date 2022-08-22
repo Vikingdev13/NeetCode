@@ -48,4 +48,4 @@ def get_minimum_window(original, check):
 
 original = "ADOBECODEBANC"
 check = "ABC"
-print(get_minimum_window(original, check))
+print(get_minimum_window(original, check)) # -> BANC
