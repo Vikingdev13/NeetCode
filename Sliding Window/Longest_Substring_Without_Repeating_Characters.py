@@ -15,6 +15,19 @@ EX: s = 'ABCD'
 a substring of s could be 'AB' or 'CD'
 a subsequence of s could be 'A', 'B', 'C', 'D', 'AB', 'ABC', 'ACD'...etc but NOT 'CBD' since B comes before C in the string s
 """
+# Brute Force method
+# Time: O(n^3) | Space: O(n)
+def longestSubarrayWithoutReapeating(nums):
+    result = 0
+    
+    for i in range(len(nums)): # O(n^2) for nest for loop
+        for j in range(i, len(nums)):
+            if nums[j] in nums[i:j]: # O(n) time and space required here 
+                break
+            result = max(result, j - i + 1)
+    return result
+
+
 def lengthOfLongestSubstring(s):
     # Initialize an empty set, a result or counter variable to 0, and the left pointer to the beginning of the string
     hashSet = set()
