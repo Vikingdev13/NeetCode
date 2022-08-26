@@ -20,7 +20,7 @@ a subsequence of s could be 'A', 'B', 'C', 'D', 'AB', 'ABC', 'ACD'...etc but NOT
 def longestSubarrayWithoutReapeating(nums):
     result = 0
     
-    for i in range(len(nums)): # O(n^2) for nest for loop
+    for i in range(len(nums)): # O(n^2) time for nest for loop
         for j in range(i, len(nums)):
             if nums[j] in nums[i:j]: # O(n) time and space required here 
                 break
