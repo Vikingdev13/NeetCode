@@ -2,10 +2,6 @@
 Given a string s, find the length of the longest substring without repeating characters
 """
 """
-Time: O(n)
-Space: O(n)
-"""
-"""
 *** My initial thought was to just add characters to a set then return the length of that set, since it cant have duplicates. But, 
 this poses an issue since the problem states the length of the longest SUBSTRING. If I do this then examples like 'pwwkew' will have a set length of 4 {p,w,k,e}, 
 and while the set length is correct, the proper substring would be 'wke'. 'pwke' is a SUBSEQUENCE and not a SUBSTRING.
@@ -27,7 +23,10 @@ def longestSubarrayWithoutReapeating(nums):
             result = max(result, j - i + 1)
     return result
 
-
+"""
+Time: O(n)
+Space: O(n)
+"""
 def lengthOfLongestSubstring(s):
     # Initialize an empty set, a result or counter variable to 0, and the left pointer to the beginning of the string
     hashSet = set()
