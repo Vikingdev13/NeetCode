@@ -34,7 +34,7 @@ def groupAnagrams2(strings):
     result = collections.defaultdict(list)
     # iterate through the input string    
     for string in strings:
-        # count = 26 zeros to start, 1 for each character fo the alphabet
+        # count = 26 zeros to start, 1 for each character of the alphabet
         count = [0] * 26
         # iterate through every character of each input string
         for ch in string:
