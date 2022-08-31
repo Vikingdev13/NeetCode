@@ -5,10 +5,29 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 """
 import collections
 """
+Time: O(nlog(n)*Llog(L))
+Space: O(n*L)
+"""
+def groupAnagrams(strings):
+    strings.sort(key = lambda word: str(sorted(word)))
+    result = []
+    currentGroup = []
+
+    for i in range(len(strings)):
+        currentGroup.append(strings[i])
+        if i == len(strings)-1 or sorted(strings[i]) != sorted(strings[i+1]):
+            result.append(currentGroup)
+            currentGroup = []
+    return result
+
+strings = ["eat","tea","tan","ate","nat","bat"]
+print(groupAnagrams(strings))
+
+"""
 Time: O(nmlog(m))
 Space: O(n*m)
 """
-def groupAnagrams(strings):
+def groupAnagrams2(strings):
     results = {}
     for i in strings:
         x = "".join(sorted(i))
@@ -19,13 +38,13 @@ def groupAnagrams(strings):
     return list(results.values())
 
 strings = ["eat","tea","tan","ate","nat","bat"]
-print(groupAnagrams(strings))
+print(groupAnagrams2(strings))
 
 """
 Time: O(m*n) - where m is the total input strings given and n is the avg length of those strings
 Space: O(n*m)
 """
-def groupAnagrams2(strings):
+def groupAnagrams3(strings):
     # initialize an empty hashMap to be used to map character count to list of anagrams
     # the following example sets the key as a tuple since in python lists cant be keys
     # bc they're mutable, but the key is a tuple of character counts, and the values are the
@@ -48,4 +67,4 @@ def groupAnagrams2(strings):
 
 
 strings = ["eat","tea","tan","ate","nat","bat"]
-print(groupAnagrams2(strings))
+print(groupAnagrams3(strings))
