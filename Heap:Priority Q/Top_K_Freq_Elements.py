@@ -3,6 +3,28 @@ Given an integer array nums and an integer k, return the k most frequent element
 
 Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 """
+# Heap Solution
+"""
+Time: O(k*log(n)) if k < n and O(n) if k = n which is better than O(nlog(n))
+Space: O(n+k)
+"""
+from collections import Counter
+import heapq
+
+def topKFreqHeap(nums, k):
+    if k == len(nums):
+        return nums
+
+    # build the hashMap
+    count = Counter(nums)
+    # build heap of top k elements and convert it to an array
+    return heapq.nlargest(k, count.keys(), key=count.get)
+
+nums = [1,1,1,2,2,3]
+k = 2
+print(topKFreqHeap(nums,k))
+
+# Optimal Solution
 """
 Time: O(n)
 Space: O(n)
@@ -29,6 +51,4 @@ def topKFrequent(nums, k):
             if len(result) == k:
                 return result
         
-nums = [1,1,1,2,2,3]
-k = 2
 print(topKFrequent(nums, k))
