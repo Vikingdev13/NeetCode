@@ -32,7 +32,7 @@ Space: O(n)
 def topKFrequent(nums, k):
     # initialize an empty dict and a list comp of empty lists, the same len of our input array
     table = {}
-    freq = [[]for i in range(len(nums) + 1)]
+    freq = [[]for _ in range(len(nums) + 1)]
     # iterate through the input array and put the val and its count into the dict table
     for num in nums:
         table[num] = 1 + table.get(num, 0)
