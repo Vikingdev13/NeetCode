@@ -25,8 +25,8 @@ def invertTree(root):
     root.right = tmp
 
     # recursively call the function on the left and right children
-    self.invertTree(root.left)
-    self.invertTree(root.right)
+    invertTree(root.left)
+    invertTree(root.right)
 
     # lastly return root
     return root
