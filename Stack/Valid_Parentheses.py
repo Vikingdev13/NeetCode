@@ -10,7 +10,7 @@ Open brackets must be closed in the correct order.
 """
 Time: O(n) - Since we will have to iterate through the entire input string
 
-Space: O(n) - Since we're using a Stack, and might have to push the entire inoput string onto the Stack
+Space: O(n) - Since we're using a Stack, and might have to push the entire input string onto the Stack
 """
 
 def validParentheses(s):
