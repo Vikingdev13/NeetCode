@@ -43,7 +43,7 @@ def validPalindrome2(s):
         while left < right and not s[right].isalnum():
             right -= 1
         # if the pointers haven't met yet AND the values at the left pointer and right pointer aren't equal, return False
-        if left < right and s[left].lower() != s[right].lower():
+        if s[left].lower() != s[right].lower():
             return False
         # Else they're equal and we can move the left and right pointer to the next char in the string
         left += 1
