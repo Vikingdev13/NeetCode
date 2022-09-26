@@ -16,11 +16,11 @@ def length_of_longest_substring(nums, k):
         if (right-left+1 - numOfOnes) > k:
             # if the val of the left ptr is a 1, update the ones counter
             if nums[left] == 1:
-                numOfOnes += 1
+                numOfOnes -= 1
             left += 1
         maxLen = max(maxLen, (right-left+1))
     return maxLen
 
 nums = [0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1]
 k = 2
-print(length_of_longest_substring(nums, k))
+print(length_of_longest_substring(nums, k)) # -> 6
