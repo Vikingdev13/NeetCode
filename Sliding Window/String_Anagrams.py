@@ -40,7 +40,31 @@ def find_string_anagrams(string, pattern):
         charFreq[left_char] += 1  
 
   return result
+    # string_len, pattern_len = len(string), len(pattern)
+    # if string_len < pattern_len:
+    #     return []
 
-string = "abbcabc"
+    # res = []
+    # # stores the frequency of each character in the pattern string
+    # pattern_counter = [ 0 ] * 26
+    # # stores the frequency of each character in the current window
+    # window = [ 0 ] * 26
+    # a = ord('a')  # ascii value of 'a'
+    # # first window
+    # for i in range(pattern_len):
+    #     pattern_counter[ord(pattern[i]) - a] += 1
+    #     window[ord(string[i]) - a] += 1
+    # if window == pattern_counter:
+    #     res.append(0)
+
+    # for i in range(pattern_len, string_len):
+    #     window[ord(string[i - pattern_len]) - a] -= 1
+    #     window[ord(string[i]) - a] += 1
+    #     if window == pattern_counter:
+    #         res.append(i - pattern_len + 1)
+    # return res
+
+
+string = "cbaebabacd"
 pattern = "abc"
 print(find_string_anagrams(string, pattern))
