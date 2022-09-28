@@ -18,7 +18,7 @@ def floodFill(image, sr, sc, newColor):
     if image == None or image[sr][sc] == newColor:
         return image
     # else call the function fill recursively
-    self.fill(image, sr, sc, image[sr][sc], newColor)
+    fill(image, sr, sc, image[sr][sc], newColor)
     return image
 # DFS
 def fill(image, row, col, initial, newColor):
@@ -27,7 +27,7 @@ def fill(image, row, col, initial, newColor):
         return
     # change the new pixel to the new color
     image[row][col] = newColor
-    self.fill(image, row+1, col, initial, newColor) # down
-    self.fill(image, row-1, col, initial, newColor) # up
-    self.fill(image, row, col+1, initial, newColor) # right
-    self.fill(image, row, col-1, initial, newColor) # left
+    fill(image, row+1, col, initial, newColor) # down
+    fill(image, row-1, col, initial, newColor) # up
+    fill(image, row, col+1, initial, newColor) # right
+    fill(image, row, col-1, initial, newColor) # left
