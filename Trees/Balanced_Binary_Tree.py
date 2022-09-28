@@ -10,7 +10,10 @@ class Node:
         self.val = val
         self.left = None
         self.right = None
-
+"""
+Time: O(n)
+Space: O(n)
+"""
 def isBalanced(root):
 
     def dfs(root):
