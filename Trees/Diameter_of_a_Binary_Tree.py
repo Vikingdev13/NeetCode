@@ -16,18 +16,19 @@ class TreeNode:
         self.right = None
 
 def diameterOfBinaryTree(root):
-    result = [0]
+    result = 0
 
     def dfs(root):
         if not root:
-            return -1
+            return 0
+        nonlocal result
         left = dfs(root.left)
         right = dfs(root.right)
-        result[0] = max(result[0], 2 + left + right)
+        result = max(result, left + right)
 
         return 1 + max(left, right)
     dfs(root)
-    return result[0]
+    return result
     
     
 
