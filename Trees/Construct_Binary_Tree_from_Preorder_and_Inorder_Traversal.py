@@ -16,7 +16,7 @@ def buildTree(preorder, inorder):
     # Preorder = (Root, Left, Right)
     # So if preorder = [3,9,20,15,7], the root is 3
     # Inorder = (Left, Root, Right)
-    # And if inorder = [9,3,15,20,7], then we see 3, everythign to the left of that is the left subtree and 
+    # And if inorder = [9,3,15,20,7], then we see 3, everything to the left of that is the left subtree and 
     # everything to the right of it is the right subtree.
     # We know that the root in preorder is the first value. 
     # Using this, we can find that root value inside the inorder array, 
