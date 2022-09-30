@@ -25,7 +25,7 @@ def isValidBST(root):
         if not node:
             return True
         # the current node's val must be between low and high
-        if node.val <= low and node.val >= high:
+        if node.val <= low or node.val >= high:
             return False
         # the left and right subtree must also be valid
         # we will compare the node vals of the left subtree to ensure that the curr node val is greater than the low or -inf and 
