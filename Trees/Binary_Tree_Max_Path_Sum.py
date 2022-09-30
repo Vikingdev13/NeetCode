@@ -7,7 +7,7 @@ Given the root of a binary tree, return the maximum path sum of any non-empty pa
 """
 """
 Time: O(n)
-Space: O(h) : where h is the tree height, to keep the recurion call stack
+Space: O(h) : where h is the tree height, to keep the recursion call stack
 """
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
