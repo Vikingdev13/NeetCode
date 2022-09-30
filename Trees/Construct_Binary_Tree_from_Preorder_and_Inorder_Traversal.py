@@ -5,11 +5,11 @@ Given two integer arrays preorder and inorder where preorder is the preorder tra
 Time: O(n)
 Space: O(n) - this can be done in O(1) space using a hashMap
 """
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 def buildTree(preorder, inorder):
     if not preorder or not inorder:
         return None
@@ -25,8 +25,8 @@ def buildTree(preorder, inorder):
     mid =  inorder.index(preorder[0])
 
     # Now that we have the root, we can build the left and right subtrees
-    root.left = self.buildTree(preorder[1: mid + 1], inorder[: mid + 1])
-    root.right = self.buildTree(preorder[mid + 1:], inorder[mid + 1:])
+    root.left = buildTree(preorder[1: mid + 1], inorder[: mid + 1])
+    root.right = buildTree(preorder[mid + 1:], inorder[mid + 1:])
 
     return root
 
