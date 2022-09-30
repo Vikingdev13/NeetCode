@@ -5,7 +5,7 @@ You must implement an algorithm that runs in O(n) time and uses constant extra s
 """
 """
 Time: O(n)
-Space: O(n) - couldn't solve in constant space
+Space: O(n)
 """
 def firstMissingPositive(nums):
     n = len(nums)
