@@ -14,14 +14,14 @@ Space: O(s*t)
 #         self.right = right
 class Solution:
     def sameTree(self, s, t):
-            # if both tree are empty
-            if not s and not t:
-                return True
-            # if both trees are not empty and the nodes are the same, recursively keep searching
-            if s and t and s.val == t.val:
-                return (self.sameTree(s.left, t.left) and self.sameTree(s.right, t.right))
-            # one of the trees are empty
-            return False
+        # if both tree are empty
+        if not s and not t:
+            return True
+        # if both trees are not empty and the nodes are the same, recursively keep searching
+        if s and t and s.val == t.val:
+            return (self.sameTree(s.left, t.left) and self.sameTree(s.right, t.right))
+        # one of the trees are empty
+        return False
             
     def isSubtree(self, root, subRoot):
         # if subRoot is empty, that's still a subtree of root
