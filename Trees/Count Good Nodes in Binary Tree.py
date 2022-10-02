@@ -9,7 +9,7 @@ Space: O(h)
 """
 def goodNodes(root):
     def dfs(node, maxSoFar):
-        if not root:
+        if not node:
             return 0
 
         result = 1 if node.val >= maxSoFar else 0            
