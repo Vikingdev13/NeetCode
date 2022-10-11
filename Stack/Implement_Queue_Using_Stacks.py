@@ -14,7 +14,7 @@ Depending on your language, the stack may not be supported natively. You may sim
 """
 """
 Time: O(1) amortized, worse case O(n)
-Space: O(1)
+Space: O(n)
 """
 class MyQueue:
 
